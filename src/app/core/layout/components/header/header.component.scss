@@ -1,0 +1,53 @@
+@use '../../../../../styles/variables' as *;
+@use '../../../../../styles/mixins' as *;
+
+.vueling-header {
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+  padding: 1rem 0;
+  font-family: $font-family-base;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: $color-secondary;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  @include respond-to(sm) {
+    .logo-text {
+      font-size: 1.4rem;
+    }
+
+    .nav-links {
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}

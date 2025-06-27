@@ -1,0 +1,34 @@
+<section class="film-list">
+  @if (films().length > 0) {
+    <div class="film-grid">
+      @for (film of films(); track film.id) {
+        <div class="film-card">
+          <h3>{{ film.titulo }}</h3>
+          <p><strong>Director:</strong> {{ film.director }}</p>
+          <p><strong>Año:</strong> {{ film.anyo }}</p>
+          <p><strong>Género:</strong> {{ film.genero }}</p>
+          <p><strong>Puntuación:</strong> {{ film.puntuacion }}</p>
+
+          <div class="card-actions">
+            <button (click)="onEdit(film.id)">Editar</button>
+            <button (click)="confirmDelete(film.id)">Eliminar</button>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <p class="empty-message">No hay películas disponibles.</p>
+  }
+
+  @if (filmToDelete !== '') {
+    <div class="modal-backdrop">
+      <div class="modal">
+        <p>¿Seguro que deseas eliminar esta película?</p>
+        <div class="modal-actions">
+          <button (click)="deleteConfirmed()">Sí, eliminar</button>
+          <button (click)="cancelDelete()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  }
+</section>

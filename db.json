@@ -1,0 +1,228 @@
+{
+  "peliculas": [
+    {
+      "id": "1",
+      "titulo": "El Padrino",
+      "director": "Francis Ford Coppola",
+      "anyo": 1972,
+      "genero": "Crimen",
+      "puntuacion": 9.2
+    },
+    {
+      "id": "3",
+      "titulo": "El Señor de los Anillos: El retorno del Rey",
+      "director": "Peter Jackson",
+      "anyo": 2003,
+      "genero": "Fantasía",
+      "puntuacion": 9.2
+    },
+    {
+      "id": "4",
+      "titulo": "Forrest Gump",
+      "director": "Robert Zemeckis",
+      "anyo": 1994,
+      "genero": "Drama",
+      "puntuacion": 8.8
+    },
+    {
+      "id": "5",
+      "titulo": "Inception",
+      "director": "Christopher Nolan",
+      "anyo": 2010,
+      "genero": "Ciencia Ficción",
+      "puntuacion": 8.8
+    },
+    {
+      "id": "6",
+      "titulo": "Fight Club",
+      "director": "David Fincher",
+      "anyo": 1999,
+      "genero": "Drama",
+      "puntuacion": 8.8
+    },
+    {
+      "id": "7",
+      "titulo": "El Imperio Contraataca",
+      "director": "Irvin Kershner",
+      "anyo": 1980,
+      "genero": "Ciencia Ficción",
+      "puntuacion": 8.7
+    },
+    {
+      "id": "8",
+      "titulo": "Matrix",
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "anyo": 1999,
+      "genero": "Ciencia Ficción",
+      "puntuacion": 8.7
+    },
+    {
+      "id": "10",
+      "titulo": "Interstellar",
+      "director": "Christopher Nolan",
+      "anyo": 2014,
+      "genero": "Ciencia Ficción",
+      "puntuacion": 8.6
+    },
+    {
+      "id": "11",
+      "titulo": "Gladiador",
+      "director": "Ridley Scott",
+      "anyo": 2000,
+      "genero": "Acción",
+      "puntuacion": 8.5
+    },
+    {
+      "id": "12",
+      "titulo": "El Caballero Oscuro: La leyenda renace",
+      "director": "Christopher Nolan",
+      "anyo": 2012,
+      "genero": "Acción",
+      "puntuacion": 8.4
+    },
+    {
+      "id": "13",
+      "titulo": "Titanic",
+      "director": "James Cameron",
+      "anyo": 1997,
+      "genero": "Romance",
+      "puntuacion": 7.8
+    },
+    {
+      "id": "14",
+      "titulo": "La La Land",
+      "director": "Damien Chazelle",
+      "anyo": 2016,
+      "genero": "Musical",
+      "puntuacion": 8
+    },
+    {
+      "id": "15",
+      "titulo": "Whiplash",
+      "director": "Damien Chazelle",
+      "anyo": 2014,
+      "genero": "Drama",
+      "puntuacion": 8.5
+    },
+    {
+      "id": "16",
+      "titulo": "Coco",
+      "director": "Lee Unkrich",
+      "anyo": 2017,
+      "genero": "Animación",
+      "puntuacion": 8.4
+    },
+    {
+      "id": "17",
+      "titulo": "Toy Story",
+      "director": "John Lasseter",
+      "anyo": 1995,
+      "genero": "Animación",
+      "puntuacion": 8.3
+    },
+    {
+      "id": "18",
+      "titulo": "Up",
+      "director": "Pete Docter",
+      "anyo": 2009,
+      "genero": "Animación",
+      "puntuacion": 8.2
+    },
+    {
+      "id": "19",
+      "titulo": "Joker",
+      "director": "Todd Phillips",
+      "anyo": 2019,
+      "genero": "Drama",
+      "puntuacion": 8.5
+    },
+    {
+      "id": "20",
+      "titulo": "La Lista de Schindler",
+      "director": "Steven Spielberg",
+      "anyo": 1993,
+      "genero": "Histórica",
+      "puntuacion": 9
+    },
+    {
+      "id": "21",
+      "titulo": "El Resplandor",
+      "director": "Stanley Kubrick",
+      "anyo": 1980,
+      "genero": "Terror",
+      "puntuacion": 8.4
+    },
+    {
+      "id": "22",
+      "titulo": "La Naranja Mecánica",
+      "director": "Stanley Kubrick",
+      "anyo": 1971,
+      "genero": "Drama",
+      "puntuacion": 8.3
+    },
+    {
+      "id": "23",
+      "titulo": "Amélie",
+      "director": "Jean-Pierre Jeunet",
+      "anyo": 2001,
+      "genero": "Comedia",
+      "puntuacion": 8.3
+    },
+    {
+      "id": "24",
+      "titulo": "El Gran Hotel Budapest",
+      "director": "Wes Anderson",
+      "anyo": 2014,
+      "genero": "Comedia",
+      "puntuacion": 8.1
+    },
+    {
+      "id": "25",
+      "titulo": "12 anyos de esclavitud",
+      "director": "Steve McQueen",
+      "anyo": 2013,
+      "genero": "Drama",
+      "puntuacion": 8.1
+    },
+    {
+      "id": "26",
+      "titulo": "El Lobo de Wall Street",
+      "director": "Martin Scorsese",
+      "anyo": 2013,
+      "genero": "Biografía",
+      "puntuacion": 8.2
+    },
+    {
+      "id": "27",
+      "titulo": "Salvar al Soldado Ryan",
+      "director": "Steven Spielberg",
+      "anyo": 1998,
+      "genero": "Bélica",
+      "puntuacion": 8.6
+    },
+    {
+      "id": "28",
+      "titulo": "Django desencadenado",
+      "director": "Quentin Tarantino",
+      "anyo": 2012,
+      "genero": "Western",
+      "puntuacion": 8.4
+    },
+    {
+      "id": "29",
+      "titulo": "Her",
+      "director": "Spike Jonze",
+      "anyo": 2013,
+      "genero": "Romance",
+      "puntuacion": 8
+    },
+    {
+      "id": "30",
+      "titulo": "Blade Runner 2049",
+      "director": "Denis Villeneuve",
+      "anyo": 2017,
+      "genero": "Ciencia Ficción",
+      "puntuacion": 8
+    }
+  ]
+}

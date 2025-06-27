@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+body {
+  background-color: $color-background;
+}

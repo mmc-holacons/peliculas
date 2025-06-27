@@ -1,0 +1,54 @@
+@use '../styles/variables' as *;
+@use "sass:color";
+
+// MEDIA QUERY
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: #{$breakpoint-sm}) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: #{$breakpoint-md}) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: #{$breakpoint-lg}) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: #{$breakpoint-xl}) {
+      @content;
+    }
+  }
+}
+
+// BOTÓN BASE
+@mixin button-base($bg: $color-primary, $color: $color-black) {
+  display: inline-block;
+  background-color: $bg;
+  color: $color;
+  font-family: $font-family-base;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.adjust($bg, $lightness: 5%);
+  }
+
+  &:disabled {
+    background-color: color.adjust($bg, $lightness: 30%);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+// TEXTO RESPONSIVO
+@mixin responsive-text($min-size, $max-size) {
+  font-size: clamp(#{$min-size}, 2vw, #{$max-size});
+}

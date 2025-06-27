@@ -1,0 +1,59 @@
+<form [formGroup]="filmForm" (ngSubmit)="onSubmit()" class="film-form">
+  <div class="form-group">
+    <label for="titulo">Título</label>
+    <input id="titulo" type="text" formControlName="titulo" />
+    @if (filmForm.get('titulo')?.touched && filmForm.get('titulo')?.invalid) {
+      <p class="error-msg">El título es obligatorio.</p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="director">Director</label>
+    <input id="director" type="text" formControlName="director" />
+    @if (filmForm.get('director')?.touched && filmForm.get('director')?.invalid) {
+      <p class="error-msg">El director es obligatorio.</p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="anyo">Año</label>
+    <input id="anyo" type="number" formControlName="anyo" />
+    @if (filmForm.get('anyo')?.touched && filmForm.get('anyo')?.invalid) {
+      <p class="error-msg">
+        @if (filmForm.get('anyo')?.errors?.['required']) {
+          El año es obligatorio.
+        } @else if (filmForm.get('anyo')?.errors?.['min']) {
+          El año debe ser posterior a {{ MIN_YEAR }}.
+        }
+      </p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="genero">Género</label>
+    <input id="genero" type="text" formControlName="genero" />
+    @if (filmForm.get('genero')?.touched && filmForm.get('genero')?.invalid) {
+      <p class="error-msg">El género es obligatorio.</p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="puntuacion">Puntuación</label>
+    <input id="puntuacion" type="number" step="0.1" formControlName="puntuacion" />
+    @if (filmForm.get('puntuacion')?.touched && filmForm.get('puntuacion')?.invalid) {
+      <p class="error-msg">
+        @if (filmForm.get('puntuacion')?.errors?.['required']) {
+          La puntuación es obligatoria.
+        } @else if (filmForm.get('puntuacion')?.errors?.['min']) {
+          La puntuación no puede ser menor que 0.
+        } @else if (filmForm.get('puntuacion')?.errors?.['max']) {
+          La puntuación no puede ser mayor que 10.
+        }
+      </p>
+    }
+  </div>
+
+  <button type="submit" [disabled]="filmForm.invalid">
+    {{ isUpdate ? 'Actualizar' : 'Crear' }}
+  </button>
+</form>
