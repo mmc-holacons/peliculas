@@ -3,6 +3,8 @@ import { FormGroup, ReactiveFormsModule, FormBuilder, Validators } from '@angula
 import { ActivatedRoute } from '@angular/router';
 import { FilmService } from '../../services/film.service';
 import { Film } from '../../models/film';
+import { ToastService } from '../../../../shared/toast/services/toast.service';
+import { ToastType } from '../../../../shared/toast/models/toast-type.model';
 
 @Component({
   selector: 'app-film-form',
@@ -12,7 +14,8 @@ import { Film } from '../../models/film';
 })
 export class FilmFormComponent implements OnInit {
   private route = inject(ActivatedRoute);
-  fb = inject(FormBuilder);
+  private toastService = inject(ToastService);
+  private fb = inject(FormBuilder);
   private filmService = inject(FilmService);
 
   filmId = '';
@@ -47,16 +50,26 @@ export class FilmFormComponent implements OnInit {
 
     const formData = this.filmForm.value;
 
-    if (this.isUpdate && this.filmId != '') {
+    if (this.isUpdate && this.filmId !== '') {
       const updatedFilm: Film = { id: this.filmId, ...formData };
 
-      this.filmService.updateFilm(updatedFilm).subscribe(() => {
-        alert('Película actualizada correctamente.');
+      this.filmService.updateFilm(updatedFilm).subscribe({
+        next: () => {
+          this.toastService.showToast('Película actualizada correctamente.', ToastType.Success);
+        },
+        error: () => {
+          this.toastService.showToast('Error al actualizar la película.', ToastType.Error);
+        },
       });
     } else {
-      this.filmService.addFilm(formData).subscribe(() => {
-        alert('Película añadida correctamente.');
-        this.filmForm.reset();
+      this.filmService.addFilm(formData).subscribe({
+        next: () => {
+          this.toastService.showToast('Película añadida correctamente.', ToastType.Success);
+          this.filmForm.reset();
+        },
+        error: () => {
+          this.toastService.showToast('Error al añadir la película.', ToastType.Error);
+        },
       });
     }
   }

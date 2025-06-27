@@ -1,0 +1,67 @@
+@use '../../../../../styles/variables' as *;
+@use '../../../../../styles/mixins' as *;
+
+.toast {
+  position: fixed;
+  top: 2rem;        
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.5rem 2rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  font-size: $font-size-base;
+  font-weight: 500;
+  max-width: 90vw;
+  text-align: center;
+  z-index: 9999;
+  animation: fadeInOut 3s ease forwards;
+  background-color: $color-primary;
+  color: $color-black;
+
+  &.success {
+    background-color: $color-primary;
+    color: $color-black;
+  }
+
+  &.error {
+    background-color: $color-error;
+    color: $color-white;
+  }
+
+  &.info {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+}

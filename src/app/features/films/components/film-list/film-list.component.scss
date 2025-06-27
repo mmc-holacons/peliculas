@@ -16,7 +16,6 @@
     border-radius: $border-radius;
     box-shadow: $box-shadow;
     padding: 1.5rem;
-    font-family: $font-family-base;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -64,7 +63,6 @@
 
 .modal-backdrop {
   position: fixed;
-  font-family: $font-family-base;
   top: 0;
   left: 0;
   width: 100%;
