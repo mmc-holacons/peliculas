@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './features/home/home/home.component';
 import { FilmListComponent } from './features/films/components/film-list/film-list.component';
 import { FilmFormComponent } from './features/films/components/film-form/film-form.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'peliculas',
-    pathMatch: 'full',
+    component: HomeComponent,
   },
   {
     path: 'peliculas',
@@ -22,6 +22,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'peliculas',
+    redirectTo: '',
   },
 ];

@@ -16,11 +16,17 @@
   }
 
   .logo-text {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: $color-primary;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+    font-family: $font-family-base;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   .nav-links {
